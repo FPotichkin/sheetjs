@@ -12038,6 +12038,9 @@ function make_json_row(sheet/*:Worksheet*/, r/*:Range*/, R/*:number*/, cols/*:Ar
 			if(v != null) isempty = false;
 		}
 	}
+  if (o.preserve_row) {
+    row.row_number = R;
+  }
 	return { row: row, isempty: isempty };
 }
 

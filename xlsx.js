@@ -25910,6 +25910,9 @@ function make_json_row(sheet, r, R, cols, header, hdr, dense, o) {
 			if(v != null) isempty = false;
 		}
 	}
+  if (o.preserve_row) {
+    row.row_number = R;
+  }
 	return { row: row, isempty: isempty };
 }
 
